@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory
+        android:key="window_setting"
+        android:title="@string/setting_window" >
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="AutoStart"
+            android:title="@string/setting_AutoStart" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="FloatShow"
+            android:summaryOff="@string/setting_floatoff"
+            android:summaryOn="@string/setting_floaton"
+            android:title="@string/setting_MinStart" />
+
+        <ListPreference
+            android:defaultValue="2"
+            android:entries="@array/FloatStyle_name"
+            android:entryValues="@array/FloatStyle"
+            android:key="FloatStyle"
+            android:title="@string/setting_FloatStyle" />
+        <ListPreference
+            android:defaultValue="5"
+            android:entries="@array/FloatBackground_name"
+            android:entryValues="@array/FloatBackground"
+            android:key="FloatBackground"
+            android:summary="Background Color"
+            android:title="@string/setting_FloatBackground" />
+        <ListPreference
+            android:defaultValue="2"
+            android:entries="@array/FloatTextColor_nam"
+            android:entryValues="@array/FloatTextColor"
+            android:key="FloatTextColor"
+            android:summary="Text Color"
+            android:title="@string/setting_FloatTextColor" />
+        <ListPreference
+            android:defaultValue="0"
+            android:entries="@array/FloatMode_name"
+            android:entryValues="@array/FloatMode"
+            android:key="FloatMode"
+            android:summary="Text Content"
+            android:title="@string/setting_FloatMode" />
+        <ListPreference
+            android:defaultValue="0"
+            android:entries="@array/UnitSpeed_name"
+            android:entryValues="@array/UnitSpeed"
+            android:key="UnitSpeed"
+            android:summary="UnitSpeed"
+            android:title="@string/setting_UnitSpeed" />
+        <ListPreference
+            android:defaultValue="0"
+            android:entries="@array/UnitDistance_name"
+            android:entryValues="@array/UnitDistance"
+            android:key="UnitDistance"
+            android:summary="UnitDistance"
+            android:title="@string/setting_UnitDistance" />
+        <ListPreference
+            android:defaultValue="1"
+            android:entries="@array/UnitAltitude_name"
+            android:entryValues="@array/UnitAltitude"
+            android:key="UnitAltitude"
+            android:summary="UnitAltitude"
+            android:title="@string/setting_UnitAltitude" />
+    </PreferenceCategory>
+    
+</PreferenceScreen>

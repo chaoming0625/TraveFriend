@@ -1,0 +1,54 @@
+<resources>
+	<!-- GPS dimensions -->
+    <dimen name="sat_info_value">20.0dip</dimen>
+    <dimen name="one_pixel">1.0dip</dimen>
+    <dimen name="sat_info_title">12.0dip</dimen>
+    <dimen name="sat_info_small">8.0dip</dimen>
+    <dimen name="sat_reticle_size">10.0dip</dimen>
+    <dimen name="sat_title_size">12.0dip</dimen>
+    <dimen name="info_txtsize">16.0dip</dimen>
+    <dimen name="big_value_size">24.0dip</dimen>
+    <dimen name="compass_big_width">235.0dip</dimen>
+    <dimen name="compass_big_height">235.0dip</dimen>
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_medium">8dp</dimen>
+    <dimen name="padding_large">16dp</dimen>
+    <dimen name="float_txtsize">16.0dip</dimen>
+    <dimen name="float_txtsize_big">24.0dip</dimen>
+    
+    
+    
+    <dimen name="private_bar_to_border">25.0dp</dimen>
+    
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="smaller_txtsize">13px</dimen>
+    <!-- zxf end -->
+
+
+    <dimen name="recomment_margin">2dp</dimen>
+    <dimen name="recomment_textsize">10sp</dimen>
+    <dimen name="recomment_width">26dp</dimen>
+    <dimen name="recomment_height">30dp</dimen>
+
+    <dimen name="price_textsize">11sp</dimen>
+    <dimen name="price_margin">18dp</dimen>
+    <dimen name="price_width">60dp</dimen>
+    <dimen name="price_height">20dp</dimen>
+
+    <!-- 查看大图页面 -->
+    <dimen name="datu_btns_paddingLeft">41px</dimen>
+    <dimen name="datu_btns_paddingRight">41px</dimen>
+    <dimen name="datu_btns_paddingTop">12px</dimen>
+    <dimen name="datu_btns_paddingBottom">2px</dimen>
+    <dimen name="datu_btn_marginLeft">64px</dimen>
+    
+    
+    <!-- Preference fragment padding, bottom -->
+    <dimen name="preference_fragment_padding_bottom">0dp</dimen>
+    <!-- Preference fragment padding, sides -->
+    <dimen name="preference_fragment_padding_side">16dp</dimen>
+
+    <integer name="preference_fragment_scrollbarStyle">0x02000000</integer> <!-- outsideOverlay -->
+</resources>

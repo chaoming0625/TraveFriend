@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="FloatStyle_name">
+        <item>普通模式</item>
+        <item>来电通式</item>
+        <item>普通迷你</item>
+        <item>超级迷你</item>
+        <item>隐藏模式</item>
+    </string-array>
+    <string-array name="FloatBackground_name">
+        <item>白色</item>
+        <item>黑色</item>
+        <item>红色</item>
+        <item>黄色</item>
+        <item>蓝色</item>
+        <item>绿色</item>
+        <item>边绿</item>
+        <item>酷黑</item>
+        <item>酷橙</item>
+        <item>边灰</item>
+        <item>边蓝</item>
+        <item>边橙</item>
+        <item>边白</item>
+        <item>边粉</item>
+        <item>全透明</item>
+    </string-array>
+    <string-array name="FloatTextColor_nam">
+        <item>白色</item>
+        <item>黑色</item>
+        <item>红色</item>
+        <item>黄色</item>
+        <item>蓝色</item>
+        <item>绿色</item>
+    </string-array>
+    <string-array name="FloatMode_name">
+        <item>仅速度</item>
+        <item>仅海拔</item>
+        <item>速度和海拔</item>
+    </string-array>
+    <string-array name="UnitSpeed_name" >
+        <item>公里/小时</item>
+        <item>节</item>
+        <item>英里/小时</item>
+        <item>米/秒</item>
+    </string-array>
+    <string-array name="UnitDistance_name">
+        <item>公里</item>
+        <item>米</item>
+        <item>英里</item>
+        <item>海里</item>
+        <item>码</item>
+    </string-array>
+    <string-array name="UnitAltitude_name">
+        <item>公里</item>
+        <item>米</item>
+        <item>英尺</item>
+        <item>码</item>
+    </string-array>
+    <string-array name="LogMod_name">
+        <item>不记录</item>
+        <item>每天一个</item>
+        <item>每次启动</item>
+        <item>指定文件</item>
+    </string-array>
+    <string-array name="sig_name">
+        <item>未定位</item>
+        <item>非差分定位</item>
+        <item>差分定位</item>
+        <item>感应</item>
+        <item>未知</item>
+        <item>未知</item>
+        <item>正在估算</item>
+    </string-array>
+    <string-array name="fix_name">
+        <item>未知</item>
+        <item>未定位</item>
+        <item>二维定位</item>
+        <item>三维定位</item>
+    </string-array>
+</resources>

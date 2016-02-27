@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:GpsValue="http://schemas.android.com/apk/res/com.insthub.ecmobile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/gps_linearlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="48dp" >
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="20dp"
+                    android:background="#000000" />
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/nav_bg" />
+
+                <TextView
+                    android:layout_width="230dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="GPS"
+                    android:textColor="#ffffff"
+                    android:textSize="24dp" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <com.gotraveling.insthub.gps.view.SatelliteSnrView
+                android:id="@+id/fragment_gps_sate_snr"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <com.gotraveling.insthub.gps.view.GpsValueView
+                android:id="@+id/txtLongitude"
+                GpsValue:name="@string/txtLongitude"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                GpsValue:body="1"
+                GpsValue:text="-----.-----"
+                GpsValue:textSize="@dimen/big_value_size"
+                android:padding="5dp" />
+
+            <com.gotraveling.insthub.gps.view.GpsValueView
+                android:id="@+id/txtLatitude"
+                GpsValue:name="@string/txtLatitude"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                GpsValue:body="1"
+                GpsValue:text="-----.-----"
+                GpsValue:textSize="@dimen/big_value_size"
+                android:padding="5dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <com.gotraveling.insthub.gps.view.GpsValueView
+                android:id="@+id/txtAltitude"
+                GpsValue:name="@string/txtAltitude"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                GpsValue:body="1"
+                GpsValue:text="-----.-----"
+                GpsValue:textSize="@dimen/big_value_size"
+                android:padding="5dp" />
+
+            <com.gotraveling.insthub.gps.view.GpsValueView
+                android:id="@+id/txtSpeed"
+                GpsValue:name="@string/txtSpeed"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                GpsValue:body="1"
+                GpsValue:text="-----.-----"
+                GpsValue:textSize="@dimen/big_value_size"
+                android:minWidth="70dp"
+                android:padding="5dp" />
+
+            <com.gotraveling.insthub.gps.view.GpsValueView
+                android:id="@+id/txtSati"
+                GpsValue:name="@string/txtSati"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                GpsValue:body="1"
+                GpsValue:text="-----.-----"
+                GpsValue:textSize="@dimen/big_value_size"
+                android:padding="5dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <com.gotraveling.insthub.gps.view.GpsValueView
+                android:id="@+id/txtGpsStatus"
+                GpsValue:name="@string/txtGpsStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                GpsValue:body="1"
+                GpsValue:text="-----/-----"
+                GpsValue:textSize="@dimen/big_value_size"
+                android:minWidth="150dp"
+                android:padding="5dp" />
+
+            <com.gotraveling.insthub.gps.view.GpsValueView
+                android:id="@+id/txtAccuracy"
+                GpsValue:name="@string/txtAccuracy"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                GpsValue:body="1"
+                GpsValue:text="-----.-----"
+                GpsValue:textSize="@dimen/big_value_size"
+                android:padding="5dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <com.gotraveling.insthub.gps.view.GpsValueView
+                android:id="@+id/txtGpsTime"
+                GpsValue:name="@string/txtGpsTime"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                GpsValue:body="1"
+                GpsValue:text="2015-04-23 19:25:40"
+                GpsValue:textSize="@dimen/big_value_size"
+                android:padding="5dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <include layout="@layout/arcmenu_right_bottom" />
+
+</RelativeLayout>

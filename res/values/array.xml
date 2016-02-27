@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="FloatStyle_name">
+        <item>Normal</item>
+        <item>CallMaster</item>
+        <item>NormalMini</item>
+        <item>SuperMini</item>
+        <item>Hide</item>
+    </string-array>
+    <string-array name="FloatStyle">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="FloatBackground_name">
+        <item>White</item>
+        <item>Black</item>
+        <item>Red</item>
+        <item>Yellow</item>
+        <item>Blue</item>
+        <item>Green</item>
+        <item>CartoonGreen</item>
+        <item>SolidBlack</item>
+        <item>SolidOrange</item>
+        <item>CartoonBlack</item>
+        <item>CartoonBlue</item>
+        <item>CartoonOrange</item>
+        <item>CartoonWhite</item>
+        <item>CartoonPink</item>
+        <item>Transparent</item>
+    </string-array>
+    <string-array name="FloatBackground">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+    </string-array>
+    <string-array name="FloatTextColor_nam">
+        <item>White</item>
+        <item>Black</item>
+        <item>Red</item>
+        <item>Yellow</item>
+        <item>Blue</item>
+        <item>Green</item>
+    </string-array>
+    <string-array name="FloatTextColor">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="FloatMode_name">
+        <item>Speed only</item>
+        <item>Altitude only</item>
+        <item>Speed and Altitude</item>
+    </string-array>
+    <string-array name="FloatMode">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="UnitSpeed_name">
+        <item>公里/小时</item>
+        <item>节</item>
+        <item>英里/小时</item>
+        <item>米/秒</item>
+    </string-array>
+    <string-array name="UnitSpeed">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="UnitDistance_name">
+        <item>公里</item>
+        <item>米</item>
+        <item>英里</item>
+        <item>海里</item>
+        <item>码</item>
+    </string-array>
+    <string-array name="UnitDistance">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="UnitAltitude_name">
+        <item>公里</item>
+        <item>米</item>
+        <item>英尺</item>
+        <item>码</item>
+    </string-array>
+    <string-array name="UnitAltitude">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="LogMod_name">
+        <item>不记录</item>
+        <item>每天一个</item>
+        <item>每次启动</item>
+        <item>指定文件</item>
+    </string-array>
+    <string-array name="LogMod">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="sig_name">
+        <item>Invalid</item>
+        <item>Fix</item>
+        <item>Differential</item>
+        <item>Sensitive</item>
+        <item>------------</item>
+        <item>------------</item>
+        <item>Evaluating</item>
+    </string-array>
+    <string-array name="fix_name">
+        <item>-------</item>
+        <item>NoneFix</item>
+        <item>2D</item>
+        <item>3D</item>
+    </string-array>
+</resources>

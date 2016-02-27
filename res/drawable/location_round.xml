@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 设置圆角边框 -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="20dp"
+    android:shape="rectangle" >
+
+    <solid android:color="#04AEDA" />
+
+    <corners
+        android:bottomLeftRadius="50dp"
+        android:bottomRightRadius="50dp"
+        android:topLeftRadius="50dp"
+        android:topRightRadius="50dp" />
+
+</shape>
