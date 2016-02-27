@@ -16,7 +16,10 @@ package com.gotraveling.insthub.ecmobile.fragment;
 
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
@@ -29,8 +32,14 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.gotraveling.external.activeandroid.util.Log;
 import com.gotraveling.insthub.ecmobile.activity.A0_SigninActivity;
 import com.gotraveling.insthub.ecmobile.model.ShoppingCartModel;
+import com.gotraveling.insthub.gps.utils.NaviPrefs;
+import com.gotraveling.insthub.gps.view.DataFlush;
+import com.gotraveling.insthub.gps.view.FloatWindowService;
+import com.gotraveling.insthub.gps.view.GPSFragment;
+import com.gotraveling.insthub.gps.view.TrackService;
 import com.insthub.ecmobile.R;
 
 public class TabsFragment extends Fragment
@@ -51,10 +60,15 @@ public class TabsFragment extends Fragment
     
 	private SharedPreferences shared;
 	private SharedPreferences.Editor editor;
+	
+	GPSFragment gpsFragment;
     B0_IndexFragment homeFragment;
     D0_CategoryFragment searchFragment;
     C0_ShoppingCartFragment shoppingCartFragment;
     E0_ProfileFragment profileFragment;
+    
+    protected int mCurrent = -1;
+	private MsgReceiver mReceiver;
 
     public TabsFragment() {
     }
@@ -73,6 +87,17 @@ public class TabsFragment extends Fragment
         shared = getActivity().getSharedPreferences("userInfo", 0); 
 		editor = shared.edit();
         
+		// 动态注册广播接收器
+		mCurrent = 0;
+		mReceiver = new MsgReceiver();
+		IntentFilter intentFilter = new IntentFilter();
+		intentFilter.addAction(TrackService.MSG_Position);
+		intentFilter.addAction(TrackService.MSG_Satellite);
+		getActivity().registerReceiver(mReceiver, intentFilter);
+		if (NaviPrefs.mFloatShow)
+			FloatWindowService.Notify(getActivity(), FloatWindowService.Cmd_Start);
+				
+		
         return mainView;
     }
 
@@ -129,14 +154,25 @@ public class TabsFragment extends Fragment
 	void OnTabSelected(String tabName) {
         if (tabName == "tab_one") {
 
-            if (null == homeFragment)
-            {
-                homeFragment = new B0_IndexFragment();
-            }
+//            if (null == homeFragment)
+//            {
+//                homeFragment = new B0_IndexFragment();
+//            }
+//
+//            FragmentTransaction localFragmentTransaction = getFragmentManager().beginTransaction();
+//            localFragmentTransaction.replace(R.id.fragment_container, homeFragment, "tab_one");
+//            localFragmentTransaction.commit();
+        	
+        	mCurrent = 0;
+			if (gpsFragment == null) {
+				gpsFragment = new GPSFragment();
+			}
 
-            FragmentTransaction localFragmentTransaction = getFragmentManager().beginTransaction();
-            localFragmentTransaction.replace(R.id.fragment_container, homeFragment, "tab_one");
-            localFragmentTransaction.commit();
+			FragmentTransaction localFragmentTransaction = getFragmentManager()
+					.beginTransaction();
+			localFragmentTransaction.replace(R.id.fragment_container,
+					gpsFragment, "tab_one");
+			localFragmentTransaction.commit();
         	
 
             this.tab_one.setImageResource(R.drawable.footer_home_active_icon);
@@ -277,6 +313,12 @@ public class TabsFragment extends Fragment
 //    	setShoppingcartNum();
     }
     
+    @Override
+	public void onDestroy() {
+		getActivity().unregisterReceiver(mReceiver);
+		super.onDestroy();
+	}
+    
     public static void setShoppingcartNum() {
     	if(ShoppingCartModel.getInstance().goods_num == 0) {
     		shopping_cart_num_bg.setVisibility(View.GONE);
@@ -286,5 +328,23 @@ public class TabsFragment extends Fragment
         }
     }
     
-    
+    /**
+	 * 广播接收器
+	 * 
+	 * @author ChaoMing
+	 *
+	 */
+	public class MsgReceiver extends BroadcastReceiver {
+		@Override
+		public void onReceive(Context context, Intent intent) {
+			if (intent == null)
+				return;
+			String act = intent.getAction();
+			Log.d("MainActivity.MsgReceiver(): " + act);
+			if (mCurrent < 0)
+				return;
+			if (mCurrent == 0)
+				((DataFlush) gpsFragment).onDataChange(act);
+		}
+	}
 }
