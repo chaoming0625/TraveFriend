@@ -218,6 +218,24 @@ public class GPSFragment extends BaseFragment implements DataFlush,
 			});
 			thread.start();
 			break;
+		case 6:
+			thread = new Thread(new Runnable() {
+				@Override
+				public void run() {
+					try {
+						Thread.sleep(320);
+					} catch (InterruptedException e) {
+						Toast.makeText(getActivity(), "抱歉，Activity无法启动！",
+								Toast.LENGTH_SHORT).show();
+					}
+					Intent intent = new Intent();
+					intent.setClass(getActivity(),
+							CompassActivity.class);
+					startActivity(intent);
+				}
+			});
+			thread.start();
+			break;
 		}
 	}
 

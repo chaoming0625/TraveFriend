@@ -93,6 +93,7 @@ public class E0_ProfileFragment extends BaseFragment implements IXListViewListen
     private ImageView    memberLevelIcon;
 
     private LinearLayout help;
+    private LinearLayout shoppingcart;
 	
 	private USER user;
 	private UserInfoModel userInfoModel;
@@ -171,7 +172,8 @@ public class E0_ProfileFragment extends BaseFragment implements IXListViewListen
 		address_manage = (LinearLayout) headView.findViewById(R.id.profile_head_address_manage);
 		collect_num = (TextView) headView.findViewById(R.id.profile_head_collect_num);
         help = (LinearLayout)headView.findViewById(R.id.profile_help);
-		
+        shoppingcart  = (LinearLayout)headView.findViewById(R.id.profile_shoppingcart);
+        
 		setting.setOnClickListener(this);
 		camera.setOnClickListener(this);
 		payment.setOnClickListener(this);
@@ -183,6 +185,7 @@ public class E0_ProfileFragment extends BaseFragment implements IXListViewListen
 		address_manage.setOnClickListener(this);
 		name.setOnClickListener(this);
         help.setOnClickListener(this);
+        shoppingcart.setOnClickListener(this);
 
         uid = shared.getString("uid", "");
 		File files = new File(getActivity().getCacheDir()+"/ECMobile/cache"+"/"+uid+"-temp.jpg");

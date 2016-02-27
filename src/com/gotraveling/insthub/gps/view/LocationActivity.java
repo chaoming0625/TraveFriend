@@ -79,20 +79,26 @@ public class LocationActivity extends BaseActivity implements OnClickListener,
 			}
 		};
 		requestLocButton.setOnClickListener(btnClickListener);
-
+		
+		// 地图初始化
 		mMapView = (MapView) findViewById(R.id.bmapView);
 		mBaiduMap = mMapView.getMap();
 		MapStatusUpdate msu = MapStatusUpdateFactory.zoomTo(15.f);
 		mBaiduMap.setMapStatus(msu);
-
+		
+		// 开启定位图层
 		mBaiduMap.setMyLocationEnabled(true);
+		// 定位初始化
 		mLocClient = new LocationClient(this);
 		myListener = new MyLocationListenner();
 		mLocClient.registerLocationListener(myListener);
 		LocationClientOption option = new LocationClientOption();
-		option.setOpenGps(true);// ��gps
-		option.setCoorType("bd09ll"); // ������������
-		option.setScanSpan(1000); // ���÷���λ����ļ��ʱ��Ϊ1000ms
+		// 打开gps
+		option.setOpenGps(true);
+		// 设置坐标类型
+		option.setCoorType("bd09ll"); 
+		//设置发起定位请求的间隔时间为1000ms 
+		option.setScanSpan(1000);
 		mLocClient.setLocOption(option);
 		mLocClient.start();
 
@@ -113,19 +119,19 @@ public class LocationActivity extends BaseActivity implements OnClickListener,
 	}
 
 	/**
-	 * ��λSDK��������
+	 * 定位SDK监听函数
 	 */
 	public class MyLocationListenner implements BDLocationListener {
 
 		@Override
 		public void onReceiveLocation(BDLocation location) {
-			// map view ���ٺ��ڴ����½��յ�λ��
+			// map view 销毁后不在处理新接收的位置
 			if (location == null || mMapView == null)
 				return;
 
 			MyLocationData locData = new MyLocationData.Builder()
 					.accuracy(location.getRadius())
-					// �˴����ÿ����߻�ȡ���ķ�����Ϣ��˳ʱ��0-360
+					// 此处设置开发者获取到的方向信息，顺时针0-360
 					.direction(100).latitude(location.getLatitude())
 					.longitude(location.getLongitude()).build();
 			mBaiduMap.setMyLocationData(locData);
@@ -141,23 +147,23 @@ public class LocationActivity extends BaseActivity implements OnClickListener,
 
 	@Override
 	protected void onPause() {
-		// MapView������������Activityͬ������activity����ʱ�����MapView.onPause()
+		// MapView的生命周期与Activity同步，当activity挂起时需调用MapView.onPause()
 		mMapView.onPause();
 		super.onPause();
 	}
 
 	@Override
 	protected void onResume() {
-		// MapView������������Activityͬ������activity�ָ�ʱ�����MapView.onResume()
+		// MapView的生命周期与Activity同步，当activity恢复时需调用MapView.onResume()
 		mMapView.onResume();
 		super.onResume();
 	}
 
 	@Override
 	protected void onDestroy() {
-		// �˳�ʱ���ٶ�λ
+		// 退出时销毁定位
 		mLocClient.stop();
-		// �رն�λͼ��
+		// 关闭定位图层
 		mBaiduMap.setMyLocationEnabled(false);
 		mMapView.onDestroy();
 		mMapView = null;

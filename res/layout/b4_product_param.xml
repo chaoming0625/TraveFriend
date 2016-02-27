@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:background="@drawable/background"
+        android:background="@drawable/background_compass_activity_xml"
         android:divider="#cccccc"
         android:dividerHeight="0.1dp"
         android:headerDividersEnabled="false"
