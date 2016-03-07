@@ -22,6 +22,7 @@ import android.os.Build;
 
 import com.gotraveling.insthub.BeeFramework.BeeFrameworkApp;
 import com.gotraveling.insthub.BeeFramework.model.BeeQuery;
+import com.gotraveling.insthub.BeeFramework.service.NetworkStateService;
 import com.gotraveling.insthub.BeeFramework.view.ToastView;
 import com.gotraveling.insthub.ecmobile.EcmobileManager;
 import com.gotraveling.insthub.ecmobile.fragment.D0_CategoryFragment;
@@ -67,8 +68,9 @@ public class EcmobileMainActivity extends FragmentActivity
 	    super.onCreate(savedInstanceState);
 	    setContentView(R.layout.main);
 	    
-	    Intent intent = new Intent();
-		intent.setAction("com.BeeFramework.NetworkStateService");
+	    Intent intent = new Intent(this, NetworkStateService.class);
+//	    intent.s
+//		intent.setAction("com.gotraveling.insthub.BeeFramework.service.NetworkStateService");
 		startService(intent);
 		
 		if(getIntent().getStringExtra(CUSTOM_CONTENT) != null) {
@@ -193,8 +195,8 @@ public class EcmobileMainActivity extends FragmentActivity
 
                 return true;
             } else {
-            	Intent intent = new Intent();
-        		intent.setAction("com.BeeFramework.NetworkStateService");
+            	Intent intent = new Intent(this, NetworkStateService.class);
+//        		intent.setAction("com.BeeFramework.NetworkStateService");
         		stopService(intent);
                 finish();
                 ToastView.cancel();

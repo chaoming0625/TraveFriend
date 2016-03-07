@@ -424,7 +424,6 @@ public class E0_ProfileFragment extends BaseFragment implements IXListViewListen
 			}
 			break;
          case R.id.profile_help:
-            
 			intent = new Intent(getActivity(), G2_InfoActivity.class);
 			startActivity(intent);
 			getActivity().overridePendingTransition(R.anim.push_right_in,
@@ -443,7 +442,11 @@ public class E0_ProfileFragment extends BaseFragment implements IXListViewListen
                          R.anim.push_right_out);
              }
         	 break;
-           
+         case R.id.profile_shoppingcart:
+        	 intent = new Intent(getActivity(), C0_ShoppingCartActivity.class);
+ 			startActivity(intent);
+ 			getActivity().overridePendingTransition(R.anim.push_buttom_in,R.anim.push_buttom_out);
+        	break;
 		}
 	}
 	

@@ -212,7 +212,7 @@ public class GPSFragment extends BaseFragment implements DataFlush,
 					}
 					Intent intent = new Intent();
 					intent.setClass(getActivity(),
-							SettingActivity.class);
+							CompassActivity.class);
 					startActivity(intent);
 				}
 			});
@@ -230,7 +230,7 @@ public class GPSFragment extends BaseFragment implements DataFlush,
 					}
 					Intent intent = new Intent();
 					intent.setClass(getActivity(),
-							CompassActivity.class);
+							SettingActivity.class);
 					startActivity(intent);
 				}
 			});

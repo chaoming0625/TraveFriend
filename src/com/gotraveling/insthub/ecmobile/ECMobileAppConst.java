@@ -24,10 +24,10 @@ public class ECMobileAppConst
 //  public static final String AppKey = "7859dc9d12c213b3b223da8a524344a3";
   public static final String AppKey = "00d4f7310e493c3e92026f71a825c253";
 
-  public static final String SERVER_PRODUCTION = "http://www.ouajo.com/ECMobile/?url=";
-  public static final String SERVER_DEVELOPMENT = "http://www.ouajo.com/ECMobile/?url=";
-  public static final String WAP_PAY_CALLBCK_DEVELOPMENT="http://www.ouajo.com/ECMobile/payment/app_callback.php?";
-  public static final String WAP_PAY_CALLBCK_PRODUCTION="http://www.ouajo.com/ECMobile/payment/app_callback.php?";
+  public static final String SERVER_PRODUCTION = "http://mall.ouajo.com/ECMobile/?url=";
+  public static final String SERVER_DEVELOPMENT = "http://mall.ouajo.com/ECMobile/?url=";
+  public static final String WAP_PAY_CALLBCK_DEVELOPMENT="http://mall.ouajo.com/ECMobile/payment/app_callback.php?";
+  public static final String WAP_PAY_CALLBCK_PRODUCTION="http://mall.ouajo.com/ECMobile/payment/app_callback.php?";
 	
 //   public static final String AppId = "Your Infomation";
 //    public static final String AppKey = "Your Infomation";

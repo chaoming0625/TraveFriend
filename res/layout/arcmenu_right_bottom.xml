@@ -23,37 +23,37 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/composer_music"
+        android:src="@drawable/arcmenu_btn_1"
         android:tag="Music" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/composer_place"
+        android:src="@drawable/arcmenu_btn_2"
         android:tag="Place" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/composer_sleep"
+        android:src="@drawable/arcmenu_btn_3"
         android:tag="Sleep" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/composer_thought"
+        android:src="@drawable/arcmenu_btn_4"
         android:tag="Sun" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/composer_with"
+        android:src="@drawable/arcmenu_btn_5"
         android:tag="People" />
     
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/composer_with"
+        android:src="@drawable/arcmenu_btn_6"
         android:tag="People" />
 
 </com.gotraveling.insthub.gps.view.ArcMenu>
