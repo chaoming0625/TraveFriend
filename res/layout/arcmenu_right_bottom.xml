@@ -20,6 +20,127 @@
             android:src="@drawable/composer_icn_plus" />
     </RelativeLayout>
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:tag="GPS" >
+
+        <TextView
+            android:id="@+id/arcmenu_tv_1" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  GPS"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arcmenu_btn_1"
+            android:tag="GPS" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:tag="浮窗" >
+
+        <TextView
+            android:id="@+id/arcmenu_tv_2" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  浮窗"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arcmenu_btn_2"
+            android:tag="fuchuang" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:tag="卫星" >
+
+        <TextView
+            android:id="@+id/arcmenu_tv_3" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  卫星"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arcmenu_btn_3"
+            android:tag="satellite" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:tag="导航" >
+
+        <TextView
+            android:id="@+id/arcmenu_tv_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  导航"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arcmenu_btn_4"
+            android:tag="daohang" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:tag="罗盘" >
+
+        <TextView
+            android:id="@+id/arcmenu_tv_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  罗盘"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arcmenu_btn_5"
+            android:tag="luopan" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:tag="设置" >
+
+        <TextView
+            android:id="@+id/arcmenu_tv_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  设置"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arcmenu_btn_6"
+            android:tag="setting" />
+    </LinearLayout>
+
+    <!--
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -55,5 +176,6 @@
         android:layout_height="wrap_content"
         android:src="@drawable/arcmenu_btn_6"
         android:tag="People" />
+    -->
 
 </com.gotraveling.insthub.gps.view.ArcMenu>
